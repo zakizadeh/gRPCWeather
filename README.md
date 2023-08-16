@@ -10,4 +10,4 @@ client keeps sending messages one by one to the server via await clientStreaming
 
 we have two tasks running parallelly, one for streaming the messages “await duplexStreamingCall.RequestStream.WriteAsync(new StreamMessage { Index = i });” and the other task keeps reading messages from the response stream sent from the server side “duplexStreamingCall.ResponseStream.Current” until there is a message available (await duplexStreamingCall.ResponseStream.MoveNext() is true).
 If you run the server and client, the output will be as:
-![grpsc-output](https://github.com/zakizadeh/gRPCWeather/assets/11499371/b53a1eab-314c-4941-85c9-502cfcdeecba)
+![grpsc-output](https://github.com/zakizadeh/gRPCWeather/assets/11499371/6859cacd-caae-4331-a3a0-efa476cdefd5)
